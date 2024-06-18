@@ -1,0 +1,197 @@
+package com.ecommerce.seller.controller;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.util.StringUtils;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.ecommerce.seller.entity.CategoryEntity;
+import com.ecommerce.seller.entity.ProductDetailsEntity;
+import com.ecommerce.seller.entity.RecipesDetailsEntity;
+import com.ecommerce.seller.entity.SellerDetailsEntity;
+import com.ecommerce.seller.repository.SellerDetailsRepositoy;
+import com.ecommerce.seller.service.ISellerService;
+import com.ecommerce.seller.vo.LoginInputVo;
+
+import lombok.extern.slf4j.Slf4j;
+
+@RestController
+@Slf4j
+public class SellerController {
+
+	@Autowired
+	SellerDetailsRepositoy sellerDetailsRepo;
+
+	@Autowired
+	ISellerService sellerService;
+
+	@GetMapping(value = "/seller-login", produces = "application/json")
+	public ResponseEntity<Optional<SellerDetailsEntity>> sampleMethod() {
+		// List<SellerDetailsEntity> sellerList = sellerDetailsRepo.findAll();
+		// System.out.println(sellerList);
+		Optional<SellerDetailsEntity> sellerDetails = sellerDetailsRepo.findById(2);
+		return new ResponseEntity<Optional<SellerDetailsEntity>>(sellerDetails, HttpStatus.OK);
+		// return new ResponseEntity<List<SellerDetailsEntity>>(usesellerListrList,
+		// HttpStatus.OK);
+
+	}
+
+	@PostMapping(value = "/check-seller-login", produces = "application/json", consumes = { "*/*" })
+	public ResponseEntity<SellerDetailsEntity> checkUserLogin(@RequestBody LoginInputVo loginVo) {
+		SellerDetailsEntity sellerDetails = sellerDetailsRepo.findByEmailAndPassword(loginVo.getEmail(),
+				loginVo.getPassword());
+		// List<SellerDetailsEntity> sellerList = sellerDetailsRepo.findAll();
+		// return new ResponseEntity<List<SellerDetailsEntity>>(sellerList,
+		// HttpStatus.OK);
+
+		if (sellerDetails != null && !StringUtils.isEmpty(sellerDetails.getEmail()))
+			return new ResponseEntity<SellerDetailsEntity>(sellerDetails, HttpStatus.OK);
+		else
+			return new ResponseEntity<SellerDetailsEntity>(sellerDetails, HttpStatus.OK);
+
+	}
+
+	@GetMapping(value = "/forgot-pass", produces = "application/json")
+	public ResponseEntity<SellerDetailsEntity> getForgotPasswordData(
+			@RequestParam(value = "email", required = false) String email) {
+		log.info(email);
+		String regex = "\\d+";
+		String contactNo = "";
+		if (email.matches(regex)) {
+			contactNo = email;
+			email = "";
+		}
+
+		SellerDetailsEntity sellerDetails = sellerDetailsRepo.findByEmailOrContactNo(email, contactNo);
+		return new ResponseEntity<SellerDetailsEntity>(sellerDetails, HttpStatus.OK);
+
+	}
+
+	@PostMapping(value = "/reset-pass", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<?> resetUserPassword(@RequestBody LoginInputVo inputeVO) {
+		HttpHeaders headers = new HttpHeaders();
+		headers.add("content-Type", "application/json");
+
+		String regex = "\\d+";
+		String contactNo = "";
+		if (inputeVO.getEmail().matches(regex)) {
+			contactNo = inputeVO.getEmail();
+			inputeVO.setEmail("");
+		}
+
+		int count = sellerDetailsRepo.resetSellerPassword(inputeVO.getEmail(), contactNo, inputeVO.getPassword());
+		LoginInputVo responseVo = new LoginInputVo();
+		responseVo.setResponse(count + "row is uptaded for user :" + inputeVO.getEmail());
+		return new ResponseEntity<>(responseVo, HttpStatus.OK);
+
+	}
+
+	@PostMapping(value = "/saveSeller", produces = "application/json")
+	public ResponseEntity<?> saveSeller(@RequestBody SellerDetailsEntity ud) {
+
+		SellerDetailsEntity sellerdetails = sellerDetailsRepo.save(ud);
+		System.out.println(sellerdetails);
+
+		return new ResponseEntity<SellerDetailsEntity>(sellerdetails, HttpStatus.OK);
+	}
+
+	@GetMapping("/load-categories")
+	public ResponseEntity<?> loadAllCategories() {
+
+		return new ResponseEntity<List<CategoryEntity>>(sellerService.getAllCategories(), HttpStatus.OK);
+
+	}
+
+//	@PostMapping("/add-category")
+//	public ResponseEntity<?> addNewCategory(@RequestBody CategoryEntity categoryDetails) {
+//		System.out.println(categoryDetails);
+//		return new ResponseEntity<CategoryEntity>(sellerService.addNewCategory(categoryDetails), HttpStatus.OK);
+//
+//	}
+
+//	@PostMapping("/add-product")
+//	public ResponseEntity<?> addNewProduct(@RequestBody ProductDetailsEntity productDetails) {
+//		 ProductDetailsEntity addedProduct =null;
+//	    // Check if the product already exists for the seller
+//	    boolean isDuplicateProduct = sellerService.isDuplicateProduct(productDetails.getProductName(), productDetails.getSellerId());
+//	    if (isDuplicateProduct) {
+//	        return new ResponseEntity<>("Duplicate Product! This product already exists.", HttpStatus.OK);
+//	    }
+//	    ProductDetailsEntity addedProduct = sellerService.addNewProduct(productDetails);
+//	    return new ResponseEntity<>(addedProduct, HttpStatus.OK);
+//	}
+
+	@PostMapping("/add-product")
+	public ResponseEntity<?> addNewProduct(@RequestBody ProductDetailsEntity productDetails) {
+		ProductDetailsEntity addedProduct = null;
+		// Check if the product already exists for the seller
+		boolean isDuplicateProduct = sellerService.isDuplicateProduct(productDetails.getProductName(),
+				productDetails.getSellerId());
+		if (!isDuplicateProduct) {
+			addedProduct = sellerService.addNewProduct(productDetails);
+		}
+		return new ResponseEntity<>(addedProduct, HttpStatus.OK);
+	}
+
+	@GetMapping("/find-by-category-id")
+	public ResponseEntity<?> loadCategory(@RequestParam("categoryId") String categoryId) {
+		// Optional<CategoryEntity>
+		// categoryData=sellerService.findByCategoryId(categoryId);
+		return new ResponseEntity<Optional<CategoryEntity>>(sellerService.findByCategoryId(categoryId), HttpStatus.OK);
+
+	}
+
+	@GetMapping("/get-seller-product")
+	public ResponseEntity<?> showMyProduct(
+			@RequestParam(name = "sellerId", required = false, defaultValue = "0") Integer sellerId) {
+		return new ResponseEntity<List<ProductDetailsEntity>>(sellerService.findProductBySeller(sellerId),
+				HttpStatus.OK);
+	}
+
+	@GetMapping("/edit-product")
+	public ResponseEntity<?> editProduct(@RequestParam(name = "productId", required = false) Integer productId) {
+		return new ResponseEntity<Optional<ProductDetailsEntity>>(sellerService.findByProductId(productId),
+				HttpStatus.OK);
+
+	}
+
+	@PostMapping("/update-product")
+	public ResponseEntity<?> updateProduct(@RequestBody ProductDetailsEntity productDetails) {
+		ProductDetailsEntity updatedProduct = sellerService.updateProduct(productDetails);
+		// System.out.println(productDetails);
+		return new ResponseEntity<ProductDetailsEntity>(updatedProduct, HttpStatus.OK);
+	}
+
+	@DeleteMapping("/delete-product")
+	public ResponseEntity<?> deleteProduct(@RequestParam("productId") Integer productId) {
+
+		return new ResponseEntity<Integer>(sellerService.deleteProduct(productId), HttpStatus.OK);
+	}
+
+	@PostMapping("/add-recipe")
+	public ResponseEntity<?> addRecipe(@RequestBody RecipesDetailsEntity recipeDetails) {
+		return new ResponseEntity<RecipesDetailsEntity>(sellerService.addNewRecipe(recipeDetails), HttpStatus.OK);
+
+	}
+
+	@GetMapping("/get-seller-recipes")
+	public ResponseEntity<?> showMyRecipes(
+			@RequestParam(name = "sellerId", required = false, defaultValue = "0") Integer sellerId) {
+		return new ResponseEntity<List<RecipesDetailsEntity>>(sellerService.findRecipesBySeller(sellerId),
+				HttpStatus.OK);
+	}
+
+}

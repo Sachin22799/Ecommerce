@@ -1,0 +1,165 @@
+package com.ecommerce.admin.controller;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.util.StringUtils;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.ecommerce.admin.entity.AdminDetailsEntity;
+import com.ecommerce.admin.entity.CategoryEntity;
+import com.ecommerce.admin.entity.ProductDetailsEntity;
+import com.ecommerce.admin.entity.SellerDetailsEntity;
+import com.ecommerce.admin.repository.AdminDetailsRepositoy;
+import com.ecommerce.admin.service.IAdminDashboardService;
+
+import com.ecommerce.seller.vo.LoginInputVo;
+
+import lombok.extern.slf4j.Slf4j;
+
+@RestController
+@Slf4j
+public class AdminDashboardController {
+
+	@Autowired
+	IAdminDashboardService adminDashboardService;
+	
+	@Autowired
+	AdminDetailsRepositoy adminDetailsRepo;
+
+	@GetMapping("/get-unapproved-categories")
+	public ResponseEntity<?> getUnapprovedCategories() {
+		return new ResponseEntity<List<CategoryEntity>>(adminDashboardService.findByIsApproved('N'), HttpStatus.OK);
+
+	}
+
+	@GetMapping("/get-unapproved-product")
+	public ResponseEntity<?> getUnapprovedProduct() {
+		return new ResponseEntity<List<ProductDetailsEntity>>(adminDashboardService.findByIsApproved1('N'),
+				HttpStatus.OK);
+
+	}
+
+	@GetMapping("/get-unapproved-seller")
+	public ResponseEntity<?> getUnapprovedSeller() {
+		return new ResponseEntity<List<SellerDetailsEntity>>(adminDashboardService.findByIsApproved2('N'),
+				HttpStatus.OK);
+
+	}
+
+	@GetMapping("/approve-seller")
+	public ResponseEntity<?> approveSeller(@RequestParam("sellerId") Integer sellerId) {
+		return new ResponseEntity<SellerDetailsEntity>(adminDashboardService.approveSeller(sellerId), HttpStatus.OK);
+
+	}
+
+	@GetMapping("/approve-category")
+	public ResponseEntity<?> approveCatagory(@RequestParam("categoryId") Integer categoryId) {
+		return new ResponseEntity<CategoryEntity>(adminDashboardService.approveCategory(categoryId),
+				HttpStatus.OK);
+
+	}
+
+	@GetMapping("/approve-product")
+	public ResponseEntity<?> approveProduct(@RequestParam("productId") Integer productId) {
+		return new ResponseEntity<ProductDetailsEntity>(adminDashboardService.approveproduct(productId), HttpStatus.OK);
+
+	}	
+	
+	@GetMapping(value = "/admin-login", produces = "application/json")
+	public ResponseEntity<Optional<AdminDetailsEntity>> sampleMethod() {
+		// List<SellerDetailsEntity> sellerList = sellerDetailsRepo.findAll();
+		// System.out.println(sellerList);
+		Optional<AdminDetailsEntity> adminDetails = adminDetailsRepo.findById(2);
+		return new ResponseEntity<Optional<AdminDetailsEntity>>(adminDetails, HttpStatus.OK);
+		// return new ResponseEntity<List<SellerDetailsEntity>>(usesellerListrList,
+		// HttpStatus.OK);
+
+	}
+
+	@PostMapping(value = "/check-admin-login", produces = "application/json", consumes = { "*/*" })
+	public ResponseEntity<AdminDetailsEntity> checkUserLogin(@RequestBody LoginInputVo loginVo) {
+		AdminDetailsEntity adminDetails = adminDetailsRepo.findByEmailAndPassword(loginVo.getEmail(),
+				loginVo.getPassword());
+		// List<SellerDetailsEntity> sellerList = sellerDetailsRepo.findAll();
+		// return new ResponseEntity<List<SellerDetailsEntity>>(sellerList,
+		// HttpStatus.OK);
+
+		if (adminDetails != null && !StringUtils.isEmpty(adminDetails.getEmail()))
+			return new ResponseEntity<AdminDetailsEntity>(adminDetails, HttpStatus.OK);
+		else
+			return new ResponseEntity<AdminDetailsEntity>(adminDetails, HttpStatus.OK);
+
+	}
+
+	@GetMapping(value = "/forgot-pass", produces = "application/json")
+	public ResponseEntity<AdminDetailsEntity> getForgotPasswordData(
+			@RequestParam(value = "email", required = false) String email) {
+		log.info(email);
+		String regex = "\\d+";
+		String contactNo = "";
+		if (email.matches(regex)) {
+			contactNo = email;
+			email = "";
+		}
+
+		AdminDetailsEntity adminDetails = adminDetailsRepo.findByEmailOrContactNo(email, contactNo);
+		return new ResponseEntity<AdminDetailsEntity>(adminDetails, HttpStatus.OK);
+
+	}
+
+	@PostMapping(value = "/reset-pass", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<?> resetUserPassword(@RequestBody LoginInputVo inputeVO) {
+		HttpHeaders headers = new HttpHeaders();
+		headers.add("content-Type", "application/json");
+
+		String regex = "\\d+";
+		String contactNo = "";
+		if (inputeVO.getEmail().matches(regex)) {
+			contactNo = inputeVO.getEmail();
+			inputeVO.setEmail("");
+		}
+
+		int count = adminDetailsRepo.resetAdminPassword(inputeVO.getEmail(), contactNo, inputeVO.getPassword());
+		LoginInputVo responseVo = new LoginInputVo();
+		responseVo.setResponse(count + "row is uptaded for admin :" + inputeVO.getEmail());
+		return new ResponseEntity<>(responseVo, HttpStatus.OK);
+
+	}
+
+	@PostMapping(value = "/saveAdmin", produces = "application/json")
+	public ResponseEntity<?> saveAdmin(@RequestBody AdminDetailsEntity admin) {
+
+		AdminDetailsEntity admindetails = adminDetailsRepo.save(admin);
+
+		return new ResponseEntity<AdminDetailsEntity>(admindetails, HttpStatus.OK);
+	}
+
+	@PostMapping("/add-category")
+	public ResponseEntity<?> addNewCategory(@RequestBody CategoryEntity categoryDetails) {
+		log.info("add- category......called.....");
+		System.out.println(categoryDetails);
+		return new ResponseEntity<CategoryEntity>(adminDashboardService.addNewCategory(categoryDetails), HttpStatus.OK);
+
+	}
+
+	
+	@PostMapping("/delete-category")
+	 public ResponseEntity<?> deleteCategory(@RequestBody CategoryEntity category) {
+		
+       return new ResponseEntity<Integer>(adminDashboardService.deleteCategory(category),HttpStatus.OK);
+   }
+	
+	
+	
+}

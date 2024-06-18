@@ -1,0 +1,129 @@
+2024-06-18 12:13:38,980 [Worker-3: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2024-06-18 12:20:04,654 [Worker-4: Importing Maven projects] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.ecommerce.admin:Ecommerce_Admin_Module:0.0.1-SNAPSHOT @ E:\Ecommerce\Ecommerce_Admin_Module\pom.xml.
+2024-06-18 12:20:07,374 [Worker-4: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Ecommerce_Admin_Module/src/main/java
+2024-06-18 12:20:07,375 [Worker-4: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /Ecommerce_Admin_Module/src/main/resources
+2024-06-18 12:20:07,396 [Worker-4: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /Ecommerce_Admin_Module/src/main/resources
+2024-06-18 12:20:07,408 [Worker-4: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Ecommerce_Admin_Module/src/test/java
+2024-06-18 12:20:09,629 [Worker-4: Importing Maven projects] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 6 sec
+2024-06-18 12:20:09,767 [Worker-13: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2024-06-18 12:20:10,291 [Worker-13: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.ecommerce.admin:Ecommerce_Admin_Module:0.0.1-SNAPSHOT @ E:\Ecommerce\Ecommerce_Admin_Module\pom.xml.
+2024-06-18 12:20:11,128 [Worker-13: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Ecommerce_Admin_Module/src/main/java
+2024-06-18 12:20:11,129 [Worker-13: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /Ecommerce_Admin_Module/src/main/resources
+2024-06-18 12:20:11,129 [Worker-13: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /Ecommerce_Admin_Module/src/main/resources
+2024-06-18 12:20:11,130 [Worker-13: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Ecommerce_Admin_Module/src/test/java
+2024-06-18 12:20:11,728 [Worker-13: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed for 1 poms: local refresh takes 0.00 sec, refresh facades takes 1.00 sec, update config takes 0.00 sec 
+2024-06-18 12:20:41,221 [Worker-3: Importing Maven projects] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.ecommerce.common:Ecommerce_Common_Module:0.0.1-SNAPSHOT @ E:\Ecommerce\Ecommerce_Common_Module\pom.xml.
+2024-06-18 12:20:41,868 [Worker-3: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Ecommerce_Common_Module/src/main/java
+2024-06-18 12:20:41,869 [Worker-3: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /Ecommerce_Common_Module/src/main/resources
+2024-06-18 12:20:41,873 [Worker-3: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /Ecommerce_Common_Module/src/main/resources
+2024-06-18 12:20:41,879 [Worker-3: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Ecommerce_Common_Module/src/test/java
+2024-06-18 12:20:42,355 [Worker-3: Importing Maven projects] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 1 sec
+2024-06-18 12:20:43,423 [Worker-14: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2024-06-18 12:20:43,429 [Worker-14: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2024-06-18 12:20:43,439 [Worker-14: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2024-06-18 12:20:43,466 [Worker-14: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2024-06-18 12:20:43,471 [Worker-14: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2024-06-18 12:20:43,471 [Worker-14: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2024-06-18 12:20:43,471 [Worker-14: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\Ecommerce\Ecommerce_Common_Module\src\test\resources
+2024-06-18 12:20:59,076 [Worker-15: Importing Maven projects] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.ecommerce.customer:Ecommerce_Custommer_Module:0.0.1-SNAPSHOT @ E:\Ecommerce\Ecommerce_Custommer_Module\pom.xml.
+2024-06-18 12:20:59,849 [Worker-15: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Ecommerce_Custommer_Module/src/main/java
+2024-06-18 12:20:59,849 [Worker-15: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /Ecommerce_Custommer_Module/src/main/resources
+2024-06-18 12:20:59,854 [Worker-15: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /Ecommerce_Custommer_Module/src/main/resources
+2024-06-18 12:20:59,860 [Worker-15: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Ecommerce_Custommer_Module/src/test/java
+2024-06-18 12:21:00,555 [Worker-15: Importing Maven projects] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 1 sec
+2024-06-18 12:21:16,850 [Worker-17: Importing Maven projects] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.ecommerce.seller:Ecommerce_Seller_Module:0.0.1-SNAPSHOT @ E:\Ecommerce\Ecommerce_Seller_Module\pom.xml.
+2024-06-18 12:21:17,449 [Worker-17: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Ecommerce_Seller_Module/src/main/java
+2024-06-18 12:21:17,449 [Worker-17: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /Ecommerce_Seller_Module/src/main/resources
+2024-06-18 12:21:17,453 [Worker-17: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /Ecommerce_Seller_Module/src/main/resources
+2024-06-18 12:21:17,463 [Worker-17: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Ecommerce_Seller_Module/src/test/java
+2024-06-18 12:21:17,933 [Worker-17: Importing Maven projects] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 1 sec
+2024-06-18 12:21:29,557 [Worker-3: Importing Maven projects] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.ecommerce.ui:Ecommerce_UI_Modul:0.0.1-SNAPSHOT @ E:\Ecommerce\Ecommerce_UI_Module\pom.xml.
+2024-06-18 12:21:29,959 [Worker-3: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Ecommerce_UI_Module/src/main/java
+2024-06-18 12:21:29,959 [Worker-3: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /Ecommerce_UI_Module/src/main/resources
+2024-06-18 12:21:29,961 [Worker-3: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /Ecommerce_UI_Module/src/main/resources
+2024-06-18 12:21:29,963 [Worker-3: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Ecommerce_UI_Module/src/test/java
+2024-06-18 12:21:30,174 [Worker-3: Importing Maven projects] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 1 sec
+2024-06-18 12:21:31,707 [Worker-17: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2024-06-18 12:21:31,707 [Worker-17: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2024-06-18 12:21:31,709 [Worker-17: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2024-06-18 12:21:31,789 [Worker-17: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 157 resources
+2024-06-18 12:21:33,514 [Worker-17: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2024-06-18 12:21:33,514 [Worker-17: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2024-06-18 12:21:33,514 [Worker-17: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\Ecommerce\Ecommerce_UI_Module\src\test\resources
+2024-06-18 12:23:01,135 [Worker-15: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2024-06-18 12:23:01,135 [Worker-15: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2024-06-18 12:23:01,136 [Worker-15: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2024-06-18 12:23:01,136 [Worker-15: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2024-06-18 12:23:01,139 [Worker-15: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2024-06-18 12:23:01,139 [Worker-15: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2024-06-18 12:23:01,139 [Worker-15: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\Ecommerce\Ecommerce_Common_Module\src\test\resources
+2024-06-18 12:23:01,192 [Worker-15: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2024-06-18 12:23:01,192 [Worker-15: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2024-06-18 12:23:01,192 [Worker-15: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2024-06-18 12:23:01,193 [Worker-15: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2024-06-18 12:23:01,196 [Worker-15: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2024-06-18 12:23:01,196 [Worker-15: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2024-06-18 12:23:01,196 [Worker-15: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\Ecommerce\Ecommerce_UI_Module\src\test\resources
+2024-06-18 12:24:28,084 [main] INFO  o.e.m2e.actions.ExecutePomAction - Creating new launch configuration
+2024-06-18 12:24:55,770 [Worker-13: Launching Ecommerce_UI_Module] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149 [603])
+2024-06-18 12:24:55,775 [Worker-13: Launching Ecommerce_UI_Module] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Sachin\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149
+2024-06-18 12:24:55,776 [Worker-13: Launching Ecommerce_UI_Module] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Sachin\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\aether-connector-okhttp-0.17.8.jar
+2024-06-18 12:24:55,776 [Worker-13: Launching Ecommerce_UI_Module] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Sachin\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\commons-cli-1.4.jar
+2024-06-18 12:24:55,780 [Worker-13: Launching Ecommerce_UI_Module] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Sachin\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\commons-io-2.6.jar
+2024-06-18 12:24:55,780 [Worker-13: Launching Ecommerce_UI_Module] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Sachin\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\commons-lang3-3.8.1.jar
+2024-06-18 12:24:55,780 [Worker-13: Launching Ecommerce_UI_Module] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Sachin\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\guice-4.2.2-no_aop.jar
+2024-06-18 12:24:55,781 [Worker-13: Launching Ecommerce_UI_Module] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Sachin\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\jansi-2.4.0.jar
+2024-06-18 12:24:55,781 [Worker-13: Launching Ecommerce_UI_Module] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Sachin\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-artifact-3.8.6.jar
+2024-06-18 12:24:55,781 [Worker-13: Launching Ecommerce_UI_Module] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Sachin\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-builder-support-3.8.6.jar
+2024-06-18 12:24:55,781 [Worker-13: Launching Ecommerce_UI_Module] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Sachin\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-compat-3.8.6.jar
+2024-06-18 12:24:55,781 [Worker-13: Launching Ecommerce_UI_Module] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Sachin\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-core-3.8.6.jar
+2024-06-18 12:24:55,782 [Worker-13: Launching Ecommerce_UI_Module] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Sachin\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-embedder-3.8.6.jar
+2024-06-18 12:24:55,782 [Worker-13: Launching Ecommerce_UI_Module] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Sachin\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-model-3.8.6.jar
+2024-06-18 12:24:55,782 [Worker-13: Launching Ecommerce_UI_Module] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Sachin\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-model-builder-3.8.6.jar
+2024-06-18 12:24:55,782 [Worker-13: Launching Ecommerce_UI_Module] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Sachin\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-plugin-api-3.8.6.jar
+2024-06-18 12:24:55,782 [Worker-13: Launching Ecommerce_UI_Module] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Sachin\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-repository-metadata-3.8.6.jar
+2024-06-18 12:24:55,783 [Worker-13: Launching Ecommerce_UI_Module] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Sachin\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-resolver-api-1.6.3.jar
+2024-06-18 12:24:55,783 [Worker-13: Launching Ecommerce_UI_Module] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Sachin\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-resolver-connector-basic-1.6.3.jar
+2024-06-18 12:24:55,783 [Worker-13: Launching Ecommerce_UI_Module] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Sachin\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-resolver-impl-1.6.3.jar
+2024-06-18 12:24:55,783 [Worker-13: Launching Ecommerce_UI_Module] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Sachin\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-resolver-provider-3.8.6.jar
+2024-06-18 12:24:55,783 [Worker-13: Launching Ecommerce_UI_Module] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Sachin\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-resolver-spi-1.6.3.jar
+2024-06-18 12:24:55,783 [Worker-13: Launching Ecommerce_UI_Module] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Sachin\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-resolver-transport-wagon-1.6.3.jar
+2024-06-18 12:24:55,784 [Worker-13: Launching Ecommerce_UI_Module] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Sachin\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-resolver-util-1.6.3.jar
+2024-06-18 12:24:55,784 [Worker-13: Launching Ecommerce_UI_Module] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Sachin\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-settings-3.8.6.jar
+2024-06-18 12:24:55,784 [Worker-13: Launching Ecommerce_UI_Module] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Sachin\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-settings-builder-3.8.6.jar
+2024-06-18 12:24:55,784 [Worker-13: Launching Ecommerce_UI_Module] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Sachin\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-shared-utils-3.3.4.jar
+2024-06-18 12:24:55,784 [Worker-13: Launching Ecommerce_UI_Module] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Sachin\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\okhttp-3.14.1.jar
+2024-06-18 12:24:55,785 [Worker-13: Launching Ecommerce_UI_Module] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Sachin\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\okio-1.17.3.jar
+2024-06-18 12:24:55,785 [Worker-13: Launching Ecommerce_UI_Module] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Sachin\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\org.eclipse.sisu.inject-0.3.5.jar
+2024-06-18 12:24:55,785 [Worker-13: Launching Ecommerce_UI_Module] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Sachin\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\org.eclipse.sisu.plexus-0.3.5.jar
+2024-06-18 12:24:55,785 [Worker-13: Launching Ecommerce_UI_Module] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Sachin\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\plexus-build-api-0.0.7.jar
+2024-06-18 12:24:55,785 [Worker-13: Launching Ecommerce_UI_Module] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Sachin\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\plexus-cipher-2.0.jar
+2024-06-18 12:24:55,785 [Worker-13: Launching Ecommerce_UI_Module] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Sachin\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\plexus-classworlds-2.6.0.jar
+2024-06-18 12:24:55,786 [Worker-13: Launching Ecommerce_UI_Module] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Sachin\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\plexus-component-annotations-2.1.0.jar
+2024-06-18 12:24:55,786 [Worker-13: Launching Ecommerce_UI_Module] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Sachin\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\plexus-interpolation-1.26.jar
+2024-06-18 12:24:55,786 [Worker-13: Launching Ecommerce_UI_Module] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Sachin\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\plexus-sec-dispatcher-2.0.jar
+2024-06-18 12:24:55,786 [Worker-13: Launching Ecommerce_UI_Module] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Sachin\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\plexus-utils-3.3.1.jar
+2024-06-18 12:24:55,786 [Worker-13: Launching Ecommerce_UI_Module] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Sachin\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\wagon-file-3.5.1.jar
+2024-06-18 12:24:55,787 [Worker-13: Launching Ecommerce_UI_Module] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Sachin\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\wagon-provider-api-3.5.1.jar
+2024-06-18 12:24:55,788 [Worker-13: Launching Ecommerce_UI_Module] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=com.google.guava_30.1.0.v20221112-0806 [10])
+2024-06-18 12:24:55,790 [Worker-13: Launching Ecommerce_UI_Module] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Sachin\.p2\pool\plugins\com.google.guava_30.1.0.v20221112-0806.jar
+2024-06-18 12:24:55,790 [Worker-13: Launching Ecommerce_UI_Module] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=slf4j.api_1.7.36 [915])
+2024-06-18 12:24:55,791 [Worker-13: Launching Ecommerce_UI_Module] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Sachin\.p2\pool\plugins\slf4j.api_1.7.36.jar
+2024-06-18 12:24:55,791 [Worker-13: Launching Ecommerce_UI_Module] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=javax.inject_1.0.0.v20220405-0441 [32])
+2024-06-18 12:24:55,793 [Worker-13: Launching Ecommerce_UI_Module] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Sachin\.p2\pool\plugins\javax.inject_1.0.0.v20220405-0441.jar
+2024-06-18 12:24:55,793 [Worker-13: Launching Ecommerce_UI_Module] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=javax.annotation_1.3.5.v20221112-0806 [30])
+2024-06-18 12:24:55,797 [Worker-13: Launching Ecommerce_UI_Module] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Sachin\.p2\pool\plugins\javax.annotation_1.3.5.v20221112-0806.jar
+2024-06-18 12:24:55,800 [Worker-13: Launching Ecommerce_UI_Module] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "E:\Ecommerce\Ecommerce_UI_Module":
+2024-06-18 12:24:55,802 [Worker-13: Launching Ecommerce_UI_Module] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -U -Dmaven.test.skip=true -DskipTests -Dstyle.color=always clean install
+2024-06-18 12:25:01,213 [main] INFO  o.e.m2e.actions.ExecutePomAction - Creating new launch configuration
+2024-06-18 12:25:15,353 [Worker-16: Launching Ecommerce_Seller_Module] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "E:\Ecommerce\Ecommerce_Seller_Module":
+2024-06-18 12:25:15,353 [Worker-16: Launching Ecommerce_Seller_Module] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -U -Dmaven.test.skip=true -DskipTests -Dstyle.color=always clean install
+2024-06-18 12:27:12,890 [main] INFO  o.e.m2e.actions.ExecutePomAction - Creating new launch configuration
+2024-06-18 12:27:25,368 [Worker-18: Launching Ecommerce_Custommer_Module] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "E:\Ecommerce\Ecommerce_Custommer_Module":
+2024-06-18 12:27:25,368 [Worker-18: Launching Ecommerce_Custommer_Module] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -U -Dmaven.test.skip=true -DskipTests -Dstyle.color=always clean install
+2024-06-18 12:27:38,785 [main] INFO  o.e.m2e.actions.ExecutePomAction - Creating new launch configuration
+2024-06-18 12:27:51,316 [Worker-20: Launching Ecommerce_Common_Module] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "E:\Ecommerce\Ecommerce_Common_Module":
+2024-06-18 12:27:51,316 [Worker-20: Launching Ecommerce_Common_Module] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -U -Dmaven.test.skip=true -DskipTests -Dstyle.color=always clean install
+2024-06-18 12:28:05,764 [main] INFO  o.e.m2e.actions.ExecutePomAction - Creating new launch configuration
+2024-06-18 12:28:18,212 [Worker-14: Launching Ecommerce_Admin_Module] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "E:\Ecommerce\Ecommerce_Admin_Module":
+2024-06-18 12:28:18,212 [Worker-14: Launching Ecommerce_Admin_Module] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -U -Dmaven.test.skip=true -DskipTests -Dstyle.color=always clean install
